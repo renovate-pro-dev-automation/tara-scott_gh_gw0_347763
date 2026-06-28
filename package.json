@@ -1,0 +1,18 @@
+{
+    "name": "nk",
+    "version": "0.0.1",
+    "description": "tasks for start that adds dependency management support",
+    "author": "Vilius Lukosius",
+    "license": "ISC",
+    "main": "index.js",
+    "scripts": {
+        "build": ":",
+        "lint": "eslint *.js **/*.js",
+        "test": "mocha 'test/**/*.spec.js' 'test/**/*.it.js'",
+        "posttest": "npm run lint -s",
+        "release": "npm-version-up --no-shrinkwrap"
+    },
+    "dependencies": {
+        "axios": "0.19.2"
+    }
+}
