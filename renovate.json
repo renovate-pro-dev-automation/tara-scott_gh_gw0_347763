@@ -1,3 +1,19 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json"
+  "hostRules": [
+    {
+      "matchHost": "https://rivernetm.jfrog.io",
+      "token": "{{ secrets.JFART_USER_TOKEN }}"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": [
+        "npm"
+      ],
+      "registryUrls": [
+        "https://rivernetm.jfrog.io/artifactory/api/npm/nizar-npm-local"
+      ]
+    }
+  ],
+  "prHourlyLimit": 10
 }
